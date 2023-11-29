@@ -71,23 +71,29 @@ int main()
     cout << "Size of modSet2: " << modSet2.size() << endl;
     cout << endl;
 
-    for (const auto& str : set2) // remove strings from modset1
+    for (const auto& str : set2) // remove strings from modSet1
     {
         modSet1.erase(str);
     }
-    for (const auto& str : set1) // remove strings from modset2
+    for (const auto& str : set1) // remove strings from modSet2
     {
         modSet2.erase(str);
     }
 
+    cout << "Sizes after removals:\n";
+    cout << "Size of set1: " << set1.size() << endl;
+    cout << "Size of set2: " << set2.size() << endl;
+    cout << "Size of modSet1: " << modSet1.size() << endl;
+    cout << "Size of modSet2: " << modSet2.size() << endl;
 
-    // remove from modSet1 all of the strings from set2 (using the set's erase member function)
-    // remove from modSet2 all of the strings from set1 (using the set's erase member function)
-    // cout the size of the 4 sets
+    ofstream outfile1("outfile1.txt");
+    copy(modSet1.begin(), modSet1.end(), ostream_iterator<string>(outfile1, " "));
+    outfile1.close();
+    ofstream outfile2("outfile2.txt");
+    copy(modSet2.begin(), modSet2.end(), ostream_iterator<string>(outfile2, " "));
+    outfile2.close();
 
-    // output modSet1 to outfile1.txt with a space between each string
-    // output modSet2 to outfile2.txt with a space between each string
-
+    return 0;
 }
 
 string punctRemover(const string& strIn)
