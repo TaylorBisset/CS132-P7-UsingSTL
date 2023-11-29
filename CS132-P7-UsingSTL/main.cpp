@@ -55,8 +55,8 @@ int main()
     infile2.close();
 
     cout << "Size of sets:\n";
-    cout << "Size of set1: " << set1.size() << endl;
-    cout << "Size of set2: " << set2.size() << endl;
+    cout << "Size of set1:    " << set1.size() << endl;
+    cout << "Size of set2:    " << set2.size() << endl;
     cout << "Size of modSet1: " << modSet1.size() << endl;
     cout << "Size of modSet2: " << modSet2.size() << endl;
     cout << endl;
@@ -65,8 +65,8 @@ int main()
     modSet2 = set2;
 
     cout << "Sizes after copying:\n";
-    cout << "Size of set1: " << set1.size() << endl;
-    cout << "Size of set2: " << set2.size() << endl;
+    cout << "Size of set1:    " << set1.size() << endl;
+    cout << "Size of set2:    " << set2.size() << endl;
     cout << "Size of modSet1: " << modSet1.size() << endl;
     cout << "Size of modSet2: " << modSet2.size() << endl;
     cout << endl;
@@ -81,8 +81,8 @@ int main()
     }
 
     cout << "Sizes after removals:\n";
-    cout << "Size of set1: " << set1.size() << endl;
-    cout << "Size of set2: " << set2.size() << endl;
+    cout << "Size of set1:    " << set1.size() << endl;
+    cout << "Size of set2:    " << set2.size() << endl;
     cout << "Size of modSet1: " << modSet1.size() << endl;
     cout << "Size of modSet2: " << modSet2.size() << endl;
 
@@ -108,6 +108,30 @@ string punctRemover(const string& strIn)
     }
     return result;
 }
+
+
+/*
+OUTPUT: 
+
+Size of sets:
+Size of set1:    1448
+Size of set2:    1016
+Size of modSet1: 0
+Size of modSet2: 0
+
+Sizes after copying:
+Size of set1:    1448
+Size of set2:    1016
+Size of modSet1: 1448
+Size of modSet2: 1016
+
+Sizes after removals:
+Size of set1:    1448
+Size of set2:    1016
+Size of modSet1: 1065
+Size of modSet2: 633
+
+*/
 
 /*
 
