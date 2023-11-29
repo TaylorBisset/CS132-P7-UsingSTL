@@ -12,10 +12,35 @@ Repo:           https://github.com/TaylorBisset/CS132-P7-UsingSTL
 */
 
 #include <iostream>
+#include <algorithm>
+#include <set>
+#include <string>
+#include <iterator>
+#include <fstream>
+#include <cctype>
+
+using namespace std;
+
+string punctRemover(const string& strIn); // function prototype
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    string str("h*\e&l)\"l#o*");
+    str = punctRemover(str);
+    cout << "string: " << str << "\n\n";  // would print out hello
+}
+
+string punctRemover(const string& strIn)
+{
+    string result;
+    for (char ch : strIn)
+    {
+        if (isalnum(ch) || ch == '\'') // keep alphanumeric characters and single quotes
+        {
+            result.push_back(ch);
+        }
+    }
+    return result;
 }
 
 /*
