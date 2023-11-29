@@ -21,5 +21,6 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="infile1.txt" />
+    <Text Include="infile2.txt" />
   </ItemGroup>
 </Project>
