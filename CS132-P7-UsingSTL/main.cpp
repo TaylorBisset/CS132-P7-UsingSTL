@@ -43,14 +43,13 @@ int main()
     // transform(ilist.begin( ), ilist.end( ), back_inserter(ilist2), sqr );   // transform example
     ifstream infile1("infile1.txt");
     transform(istream_iterator<string>(infile1), istream_iterator<string>(), inserter(set1, set1.begin()), punctRemover);
-    //        input stream from infile1.xtx    , end of infile1.txt        , insert into set1            , remove punctuation
+    //        input stream from infile1.txt    , end of infile1.txt        , insert into set1            , remove punctuation
     infile1.close();
 
-    // read all of the data from infile1.txt into set1 using the transform function. 
-    // In the transform call, you need to use your punctRemover function that will make a new copy 
-    // of the input string that will not have any punctuation other than ' .
-    
-    // read all of the data from file2 and transform it as above before inserting it into set2
+    ifstream infile2("infile2.txt");
+    transform(istream_iterator<string>(infile2), istream_iterator<string>(), inserter(set2, set2.begin()), punctRemover);
+    //        input stream from infile2.txt    , end of infile2.txt        , insert into set2            , remove punctuation
+    infile2.close();
 
     // cout the size of the 4 sets (what size goes with which set)
     // modSet1 = set1
