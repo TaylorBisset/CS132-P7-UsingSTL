@@ -26,7 +26,10 @@ string punctRemover(const string& strIn); // function prototype
 class AscDictSort 
 {
 public:
-    bool operator () (const string& str1, const string& str2) const {}
+    bool operator () (const string& str1, const string& str2) const
+    {
+        return str1 < str2;
+    }
 };
 
 int main()
@@ -50,6 +53,23 @@ int main()
     transform(istream_iterator<string>(infile2), istream_iterator<string>(), inserter(set2, set2.begin()), punctRemover);
     //        input stream from infile2.txt    , end of infile2.txt        , insert into set2            , remove punctuation
     infile2.close();
+
+    cout << "Size of set1: " << set1.size() << endl;
+    cout << "Size of set2: " << set2.size() << endl;
+    cout << "Size of modSet1: " << modSet1.size() << endl;
+    cout << "Size of modSet2: " << modSet2.size() << endl;
+
+    cout << endl;
+
+    modSet1 = set1;
+    modSet2 = set2;
+
+    cout << "Size of set1: " << set1.size() << endl;
+    cout << "Size of set2: " << set2.size() << endl;
+    cout << "Size of modSet1: " << modSet1.size() << endl;
+    cout << "Size of modSet2: " << modSet2.size() << endl;
+
+    cout << endl;
 
     // cout the size of the 4 sets (what size goes with which set)
     // modSet1 = set1
