@@ -28,16 +28,25 @@ class AscDictSort
 public:
     bool operator () (const string& str1, const string& str2) const
     {
-        return str1 < str2;
+        string lowerStr1 = toLower(str1);
+        string lowerStr2 = toLower(str2);
+
+        return lowerStr1 < lowerStr2;
+    }
+private:
+    string toLower(const string& str) const
+    {
+        string result;
+        for (char ch : str)
+        {
+            result.push_back(tolower(ch));
+        }
+        return result;
     }
 };
 
 int main()
 {
-    string str("h*\e&l)\"l#o*");
-    str = punctRemover(str);
-    cout << "string: " << str << "\n\n";  // would print out hello
-
     set<string, AscDictSort> set1;
     set<string, AscDictSort> set2;
     set<string, AscDictSort> modSet1;
