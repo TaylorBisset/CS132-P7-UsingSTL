@@ -54,27 +54,32 @@ int main()
     //        input stream from infile2.txt    , end of infile2.txt        , insert into set2            , remove punctuation
     infile2.close();
 
+    cout << "Size of sets:\n";
     cout << "Size of set1: " << set1.size() << endl;
     cout << "Size of set2: " << set2.size() << endl;
     cout << "Size of modSet1: " << modSet1.size() << endl;
     cout << "Size of modSet2: " << modSet2.size() << endl;
-
     cout << endl;
 
     modSet1 = set1;
     modSet2 = set2;
 
+    cout << "Sizes after copying:\n";
     cout << "Size of set1: " << set1.size() << endl;
     cout << "Size of set2: " << set2.size() << endl;
     cout << "Size of modSet1: " << modSet1.size() << endl;
     cout << "Size of modSet2: " << modSet2.size() << endl;
-
     cout << endl;
 
-    // cout the size of the 4 sets (what size goes with which set)
-    // modSet1 = set1
-    // modSet2 = set2
-    // cout the size of the 4 sets
+    for (const auto& str : set2) // remove strings from modset1
+    {
+        modSet1.erase(str);
+    }
+    for (const auto& str : set1) // remove strings from modset2
+    {
+        modSet2.erase(str);
+    }
+
 
     // remove from modSet1 all of the strings from set2 (using the set's erase member function)
     // remove from modSet2 all of the strings from set1 (using the set's erase member function)
