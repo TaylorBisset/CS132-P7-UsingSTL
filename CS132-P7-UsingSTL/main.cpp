@@ -23,6 +23,12 @@ using namespace std;
 
 string punctRemover(const string& strIn); // function prototype
 
+class AscDictSort 
+{
+public:
+    bool operator () (const string& str1, const string& str2) const {}
+};
+
 int main()
 {
     string str("h*\e&l)\"l#o*");
