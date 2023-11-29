@@ -63,7 +63,7 @@ int main()
     //        input stream from infile2.txt    , end of infile2.txt        , insert into set2            , remove punctuation
     infile2.close();
 
-    cout << "Size of sets:\n";
+    cout << "*** Size of sets ***\n";
     cout << "Size of set1:    " << set1.size() << endl;
     cout << "Size of set2:    " << set2.size() << endl;
     cout << "Size of modSet1: " << modSet1.size() << endl;
@@ -73,7 +73,7 @@ int main()
     modSet1 = set1;
     modSet2 = set2;
 
-    cout << "Sizes after copying:\n";
+    cout << "*** Sizes after copying ***\n";
     cout << "Size of set1:    " << set1.size() << endl;
     cout << "Size of set2:    " << set2.size() << endl;
     cout << "Size of modSet1: " << modSet1.size() << endl;
@@ -89,7 +89,7 @@ int main()
         modSet2.erase(str);
     }
 
-    cout << "Sizes after removals:\n";
+    cout << "*** Sizes after removals ***\n";
     cout << "Size of set1:    " << set1.size() << endl;
     cout << "Size of set2:    " << set2.size() << endl;
     cout << "Size of modSet1: " << modSet1.size() << endl;
@@ -122,23 +122,23 @@ string punctRemover(const string& strIn)
 /*
 OUTPUT: 
 
-Size of sets:
-Size of set1:    1448
-Size of set2:    1016
+*** Size of sets ***
+Size of set1:    1354
+Size of set2:    967
 Size of modSet1: 0
 Size of modSet2: 0
 
-Sizes after copying:
-Size of set1:    1448
-Size of set2:    1016
-Size of modSet1: 1448
-Size of modSet2: 1016
+*** Sizes after copying ***
+Size of set1:    1354
+Size of set2:    967
+Size of modSet1: 1354
+Size of modSet2: 967
 
-Sizes after removals:
-Size of set1:    1448
-Size of set2:    1016
-Size of modSet1: 1065
-Size of modSet2: 633
+*** Sizes after removals ***
+Size of set1:    1354
+Size of set2:    967
+Size of modSet1: 991
+Size of modSet2: 604
 
 */
 
