@@ -35,10 +35,15 @@ int main()
     str = punctRemover(str);
     cout << "string: " << str << "\n\n";  // would print out hello
 
-    // create 4 set<string, AscDictSort> objects ( set1, set2, modSet1, modSet2 )
+    set<string, AscDictSort> set1;
+    set<string, AscDictSort> set2;
+    set<string, AscDictSort> modSet1;
+    set<string, AscDictSort> modSet2;
 
-    // read all of the data from infile1.txt into set1 using the transform function
-
+    // read all of the data from infile1.txt into set1 using the transform function. 
+    // In the transform call, you need to use your punctRemover function that will make a new copy 
+    // of the input string that will not have any punctuation other than ' .
+    
     // read all of the data from file2 and transform it as above before inserting it into set2
 
     // cout the size of the 4 sets (what size goes with which set)
