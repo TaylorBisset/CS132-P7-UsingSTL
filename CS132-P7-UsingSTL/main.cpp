@@ -1,11 +1,16 @@
 // main.cpp
 
 /*
-Name:          Taylor Bisset
-Section:       A
-Program Name:  CS132-P7-UsingSTL
+Name:           Taylor Bisset
+Section:        A
+Program Name:   CS132-P7-UsingSTL
 
-Description:   
+Description:    This program utilizes C++ Standard Template Library (STL) 
+                 algorithms to process and manipulate sets of strings read from input files. 
+                The primary objectives include implementing a `punctRemover` function
+                 to remove punctuation from strings, 
+                 creating an `AscDictSort` functor for ascending dictionary sort 
+                 while ignoring case, and performing set operations.
 
 Repo:           https://github.com/TaylorBisset/CS132-P7-UsingSTL 
 
@@ -23,7 +28,8 @@ using namespace std;
 
 string punctRemover(const string& strIn); // function prototype
 
-class AscDictSort 
+// Functor for ascending dictionary sort, ignoring case.
+class AscDictSort
 {
 public:
     bool operator () (const string& str1, const string& str2) const
@@ -105,7 +111,8 @@ int main()
     return 0;
 }
 
-string punctRemover(const string& strIn)
+// Function to remove punctuation from a string, keeping only alphanumeric characters and single quotes.
+string punctRemover(const string& strIn) 
 {
     string result;
     for (char ch : strIn)
