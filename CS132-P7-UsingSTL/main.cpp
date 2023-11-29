@@ -40,6 +40,12 @@ int main()
     set<string, AscDictSort> modSet1;
     set<string, AscDictSort> modSet2;
 
+    // transform(ilist.begin( ), ilist.end( ), back_inserter(ilist2), sqr );   // transform example
+    ifstream infile1("infile1.txt");
+    transform(istream_iterator<string>(infile1), istream_iterator<string>(), inserter(set1, set1.begin()), punctRemover);
+    //        input stream from infile1.xtx    , end of infile1.txt        , insert into set1            , remove punctuation
+    infile1.close();
+
     // read all of the data from infile1.txt into set1 using the transform function. 
     // In the transform call, you need to use your punctRemover function that will make a new copy 
     // of the input string that will not have any punctuation other than ' .
