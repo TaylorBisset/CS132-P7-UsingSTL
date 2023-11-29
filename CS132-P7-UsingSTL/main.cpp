@@ -34,6 +34,25 @@ int main()
     string str("h*\e&l)\"l#o*");
     str = punctRemover(str);
     cout << "string: " << str << "\n\n";  // would print out hello
+
+    // create 4 set<string, AscDictSort> objects ( set1, set2, modSet1, modSet2 )
+
+    // read all of the data from infile1.txt into set1 using the transform function
+
+    // read all of the data from file2 and transform it as above before inserting it into set2
+
+    // cout the size of the 4 sets (what size goes with which set)
+    // modSet1 = set1
+    // modSet2 = set2
+    // cout the size of the 4 sets
+
+    // remove from modSet1 all of the strings from set2 (using the set's erase member function)
+    // remove from modSet2 all of the strings from set1 (using the set's erase member function)
+    // cout the size of the 4 sets
+
+    // output modSet1 to outfile1.txt with a space between each string
+    // output modSet2 to outfile2.txt with a space between each string
+
 }
 
 string punctRemover(const string& strIn)
